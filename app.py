@@ -1,13 +1,92 @@
-"""
-# My first app
-Here's our first attempt at using data to create a table:
-"""
-
 import streamlit as st
 import pandas as pd
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
 
-df
+st.set_page_config(page_title="ระบบประเมินความดัน", layout="centered")
+
+st.title("🩺 ระบบประเมินระดับความดันโลหิต")
+
+# =========================
+# โหลดไฟล์ CSV
+# =========================
+@st.cache_data
+def load_data():
+    df = pd.read_csv("table_1.csv")
+    df.columns = df.columns.str.strip()
+    return df
+
+df = load_data()
+
+if df.empty:
+    st.error("ไฟล์ CSV ไม่มีข้อมูล")
+    st.stop()
+
+category_col = df.columns[0]
+
+# =========================
+# รับค่าความดัน
+# =========================
+sys = st.number_input("ค่า SYSTOLIC (ตัวบน)", 0, 300, 120)
+dia = st.number_input("ค่า DIASTOLIC (ตัวล่าง)", 0, 200, 80)
+
+# =========================
+# กดปุ่มตรวจสอบ
+# =========================
+if st.button("🔍 ตรวจสอบระดับความดัน"):
+
+    # คำนวณระดับ
+    if sys >= 180 or dia >= 120:
+        level = 5
+    elif sys >= 140 or dia >= 90:
+        level = 4
+    elif sys >= 130 or dia >= 80:
+        level = 3
+    elif sys >= 120 and dia < 80:
+        level = 2
+    else:
+        level = 1
+
+    df_sorted = df.reset_index(drop=True)
+
+    if level <= len(df_sorted):
+        result_en = str(df_sorted.iloc[level - 1][category_col]).strip()
+    else:
+        result_en = "ไม่พบระดับ"
+
+    # =========================
+    # แปลไทย + คำแนะนำ
+    # =========================
+
+    if level == 5:
+        result_th = "ภาวะวิกฤตความดันโลหิตสูง"
+        advice = "⚠️ ระดับอันตรายมาก ควรพบแพทย์ทันที"
+        st.error(f"ระดับความดันภาษาอังกฤษ: {result_en}")
+        st.error(f"ระดับความดันภาษาไทย: {result_th}")
+        st.error(advice)
+
+    elif level == 4:
+        result_th = "ความดันโลหิตสูง ระดับที่ 2"
+        advice = "ควรปรึกษาแพทย์ และควบคุมอาหาร ออกกำลังกายสม่ำเสมอ"
+        st.error(f"ระดับความดันภาษาอังกฤษ: {result_en}")
+        st.error(f"ระดับความดันภาษาไทย: {result_th}")
+        st.warning(advice)
+
+    elif level == 3:
+        result_th = "ความดันโลหิตสูง ระดับที่ 1"
+        advice = "ควรลดเค็ม ลดมัน ออกกำลังกาย และติดตามอาการ"
+        st.warning(f"ระดับความดันภาษาอังกฤษ: {result_en}")
+        st.warning(f"ระดับความดันภาษาไทย: {result_th}")
+        st.info(advice)
+
+    elif level == 2:
+        result_th = "ความดันสูงกว่าปกติเล็กน้อย"
+        advice = "ควรควบคุมอาหารและติดตามอาการอย่างสม่ำเสมอ"
+        st.info(f"ระดับความดันภาษาอังกฤษ: {result_en}")
+        st.info(f"ระดับความดันภาษาไทย: {result_th}")
+        st.info(advice)
+
+    else:
+        result_th = "ปกติ"
+        advice = "รักษาพฤติกรรมสุขภาพที่ดีต่อไป"
+        st.success(f"ระดับความดันภาษาอังกฤษ: {result_en}")
+        st.success(f"ระดับความดันภาษาไทย: {result_th}")
+        st.success(advice)
