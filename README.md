@@ -1,5 +1,5 @@
 # Design-Thinking-2025
-<img width="1011" height="477" alt="image" src="https://github.com/user-attachments/assets/4c80075f-ab1f-4fa8-8a7e-2a7d14a89749" />
+<img width="1142" height="650" alt="image" src="https://github.com/user-attachments/assets/9cf8bfe1-0a75-44f4-8731-9c87ec37fc92" />
 
 เพื่อช่วยแก้ปัญหากลุ่มคนที่ไม่มีความรู้ความเข้าใจเกี่ยวกับค่าความดันโลหิต(SYSTOLIC mm Hg (top/upper number),DIASTOLIC mm Hg (bottom/lower number))ในการตรวจสอบว่าค่าความดันโลหิตต่างๆที่ได้มาจะอยู่ในกลุ่มไหน
 
