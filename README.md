@@ -30,9 +30,16 @@
 ## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
 - ใช้ภาษา Python
 - Framework โดยใช้ Streamlit
-- Libraries Selenium,webdriver-manager,csv (Python Standard Library)
+- Libraries Selenium,webdriver-manager,csv (Python Standard Library),pandas,streamlit
 
 ## 📦 การติดตั้งและการใช้งาน (Setup & Installation)
-1. ทำการโหลด python 
-2. ทำการติดตั้ง VScode เพื่อใช้ในการการสกัดข้อมูล
+1. ทำการโหลด python จาก 'https://www.python.org/downloads/'
+2. ทำการติดตั้ง VScode เพื่อใช้ในการการสกัดข้อมูล จาก 'https://code.visualstudio.com/download'
 3. ทำการสกัดข้อมูลที่ต้องใช้ ใน VScode ด้วยภาษา python 'https://github.com/Makin-Thaijaroen/Design-Thinking-2025/blob/main/Design.py'
+4. ทำการเชื่อม Steamlit กับ github เพื่อที่จะได้สร้างหน้าเว็ป 'https://share.streamlit.io/?utm_source=streamlit&utm_medium=referral&utm_campaign=main&utm_content=-ss-streamlit-io-topright'
+5. นำไฟล์ csv ที่ได้จากการ scraping มาอัปโหลดใน github เพื่อที่จะได้นำไฟล์ csv มาใช้ในการสร้างเว็ป
+6. เว็ปที่ได้ 'https://design-thinking-2025-auhnyccydkcdkqdma7z6yy.streamlit.app/'
+
+## 🧾 เอกสารอ้างอิงที่ใช่ในการทำงาน
+-เว็ปที่ใช้ในการ scraping ข้อมูล 'https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings'
+-Source code ที่ใช่ในการ scraping ข้อมูล และการสร้างเว็ป มาจาก ChatGPT
