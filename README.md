@@ -43,4 +43,4 @@
 
 ## 🧾 เอกสารอ้างอิงที่ใช่ในการทำงาน
 - เว็ปที่ใช้ในการ scraping ข้อมูล 'https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings'
-- Source code ที่ใช่ในการ scraping ข้อมูล และการสร้างเว็ป มาจาก ChatGPT
+- Source code ที่ใช่ในการ scraping ข้อมูล และการสร้างเว็ป แนวทางมาจาก ChatGPT
