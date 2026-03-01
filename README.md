@@ -5,19 +5,19 @@
 
 ## 🚀 ฟีเจอร์หลัก (Features)
 1) ระบบประเมินระดับความดันโลหิตอัตโนมัติ
-   -ผู้ใช้กรอกค่า Systolic (ตัวบน) และ Diastolic (ตัวล่าง)
-   -ระบบจะประเมินระดับความดันให้อัตโนมัติ
+   - ผู้ใช้กรอกค่า Systolic (ตัวบน) และ Diastolic (ตัวล่าง)
+   - ระบบจะประเมินระดับความดันให้อัตโนมัติ
 2) โหลดข้อมูลระดับความดันจากไฟล์ CSV
-   -ใช้ไฟล์ที่ได้จากการ scraping
-   -ดึงชื่อระดับความดันจากคอลัมน์
+   - ใช้ไฟล์ที่ได้จากการ scraping
+   - ดึงชื่อระดับความดันจากคอลัมน์
 3) ตรวจสอบค่าที่ไม่สมเหตุสมผล
-   -ถ้าใส่ค่าความดันเป็น 0 จะขึ้นว่า Invalid (ค่าความดันไม่สมเหตุสมผล / ไม่ถูกต้อง)
-   -ถ้าไฟล์ไม่มี CSV ในการดึงชื่อระดับความดันจะขึ้น Error แล้วหยุดทำงาน
+   - ถ้าใส่ค่าความดันเป็น 0 จะขึ้นว่า Invalid (ค่าความดันไม่สมเหตุสมผล / ไม่ถูกต้อง)
+   - ถ้าไฟล์ไม่มี CSV ในการดึงชื่อระดับความดันจะขึ้น Error แล้วหยุดทำงาน
 4) จำแนกระดับความดัน 6 ระดับ
-   -ระบบสามารถแยกได้ดังนี้ (🚨 Hypertensive Crisis (วิกฤต),🚨 Stage 2 Hypertension,⚠️         Stage 1 Hypertension,📈 Elevated,⚠️ Low Blood           Pressure,✅ Normal)
+   - ระบบสามารถแยกได้ดังนี้ (🚨 Hypertensive Crisis (วิกฤต),🚨 Stage 2 Hypertension,⚠️         Stage 1 Hypertension,📈 Elevated,⚠️ Low Blood           Pressure,✅ Normal)
 5) แสดงผลแบบมีสีและคำแนะนำ
-   -ระบบจะใช้สีเป็นการบ่งบอกความอันตรายของระยะความดัน
-   -พร้อมกับให้คำแนะนำสุขภาพเบื้องต้นตามระดับที่ตรวจพบ
+   - ระบบจะใช้สีเป็นการบ่งบอกความอันตรายของระยะความดัน
+   - พร้อมกับให้คำแนะนำสุขภาพเบื้องต้นตามระดับที่ตรวจพบ
    
 ## 👥 สมาชิกและภาระงาน (Team Members & Responsibilities)
 ตารางแสดงการแบ่งงานรายสัปดาห์ระหว่างสมาชิกทั้ง 2 คน:
@@ -41,5 +41,5 @@
 6. เว็ปที่ได้ 'https://design-thinking-2025-auhnyccydkcdkqdma7z6yy.streamlit.app/'
 
 ## 🧾 เอกสารอ้างอิงที่ใช่ในการทำงาน
--เว็ปที่ใช้ในการ scraping ข้อมูล 'https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings'
--Source code ที่ใช่ในการ scraping ข้อมูล และการสร้างเว็ป มาจาก ChatGPT
+- เว็ปที่ใช้ในการ scraping ข้อมูล 'https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings'
+- Source code ที่ใช่ในการ scraping ข้อมูล และการสร้างเว็ป มาจาก ChatGPT
